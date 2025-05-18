@@ -1,0 +1,14 @@
+from_root
+dotenv
+pymongo
+pandas
+certifi
+matplotlib
+seaborn
+Scikit-learn
+Scipy
+xgboost
+lazypredict
+typing
+numpy
+dill

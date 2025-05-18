@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#ignore files and folders that are not needed for the project
+logs/
+fvenv/
+
+

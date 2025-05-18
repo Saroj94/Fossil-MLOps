@@ -1,0 +1,43 @@
+columns:
+- uranium_lead_ratio        
+- carbon_14_ratio           
+- radioactive_decay_series  
+- stratigraphic_layer_depth 
+- geological_period         
+- paleomagnetic_data        
+- inclusion_of_other_fossils
+- isotopic_composition      
+- surrounding_rock_type     
+- stratigraphic_position    
+- fossil_size               
+- fossil_weight             
+- age  
+
+numerical_columns:
+- stratigraphic_layer_depth
+- fossil_weight            
+- isotopic_composition                        
+- radioactive_decay_series 
+- uranium_lead_ratio       
+- fossil_size              
+- carbon_14_ratio 
+- age
+
+categorical_columns:
+- geological_period  
+- paleomagnetic_data 
+- surrounding_rock_type       
+- stratigraphic_position   
+
+drop_column: _id
+
+bool_column:
+- inclusion_of_other_fossils
+
+label_column:
+- stratigraphic_position
+- paleomagnetic_data
+- geological_period
+
+ohe_column:
+- surrounding_rock_type
