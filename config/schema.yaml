@@ -21,18 +21,19 @@ numerical_columns:
 - uranium_lead_ratio       
 - fossil_size              
 - carbon_14_ratio 
-- age
 
 categorical_columns:
 - geological_period  
 - paleomagnetic_data 
 - surrounding_rock_type       
-- stratigraphic_position   
+- stratigraphic_position
+- inclusion_of_other_fossils   
 
 drop_column: _id
 
-bool_column:
-- inclusion_of_other_fossils
+###testing required
+# bool_column:
+# - inclusion_of_other_fossils
 
 label_column:
 - stratigraphic_position

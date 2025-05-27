@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fossil Age Prediction</title>
+    <!-- Corrected the CSS path -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fossil Age Prediction</h1>
+        <h2>Developer: Saroj Rai</h2>
+
+        <form method="post" action="/">
+            <label for="uranium_lead_ratio">Uranium Lead Ratio:</label>
+            <input type="number" step="any" id="uranium_lead_ratio" name="uranium_lead_ratio"required>
+
+            <label for="carbon_14_ratio">Carbon 14 Ratio:</label>
+            <input type="number" step="any" id="carbon_14_ratio" name="carbon_14_ratio" required>
+
+            <label for="radioactive_decay_series">Radioactive Decay Series:</label>
+            <input type="number" step="any" id="radioactive_decay_series" name="radioactive_decay_series" required>
+
+            <label for="stratigraphic_layer_depth">Stratigraphic Layer Depth:</label>
+            <input type="text" id="stratigraphic_layer_depth" name="stratigraphic_layer_depth" required>
+
+            <label for="geological_period">Geological Period:</label>
+            <input type="text" step="any" id="geological_period" name="geological_period" required>
+
+            <label for="paleomagnetic_data">Paleomagnetic Data:</label>
+            <input type="text" id="paleomagnetic_data" name="paleomagnetic_data" required>
+
+            <label for="inclusion_of_other_fossils">Inclusion of Other Fossils:</label>
+            <input type="boolean" id="inclusion_of_other_fossils" name="inclusion_of_other_fossils" required>
+
+            <label for="isotopic_composition">Isotopic Composition:</label>
+            <input type="number" step="any" id="isotopic_composition" name="isotopic_composition" required>
+
+            <label for="surrounding_rock_type">Surrounding Rock Type:</label>
+            <input type="text" id="surrounding_rock_type" name="surrounding_rock_type" required>
+
+            <label for="stratigraphic_position">Stratigraphic Position:</label>
+            <input type="text" id="stratigraphic_position" name="stratigraphic_position" required>
+
+            <label for="fossil_size">Fossil Size:</label>
+            <input type="number" id="fossil_size" name="fossil_size" required>
+
+            <label for="fossil_weight">Fossil Weight:</label>
+            <input type="number" step="any" id="fossil_weight" name="fossil_weight" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        <form method="get" action="/train">
+            <button type="submit" class="train-button">Train Model</button>
+        </form>
+
+        {% if context %}
+            <div class="result">
+                <h2>Result: {{ context }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

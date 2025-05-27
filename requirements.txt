@@ -12,3 +12,9 @@ lazypredict
 typing
 numpy
 dill
+boto3
+mypy_boto3_s3
+pickle
+uvicorn
+starlette
+fastapi

@@ -41,13 +41,14 @@ def load_object(file_path: str)->object:
         raise MyException(e,sys)
     
 ##save as numpy array: save data as numpy array
+##While saving the numpy array, open mode should be 'wb' (write binary)
 def save_numpy_array_data(file_path: str, array:np.array):
     try:
         ##create directory path
         dir_path=os.path.dirname(file_path)
         os.makedirs(dir_path,exist_ok=True)
         ##open file in read byte mode and save as numpy array
-        with open(file_path, 'rb') as file_obj:
+        with open(file_path, 'wb') as file_obj:
             np.save(file_obj, array)
     except Exception as e:
         raise MyException(e,sys)
@@ -67,8 +68,8 @@ def save_object(file_path:str, obj:object)->None:
     try:
         dir_path=os.path.dirname(file_path) #file path name
         os.makedirs(dir_path,exist_ok=True) #create directory with file path name
-        with open(file_path,'w') as file_obj:
-            dill.dump(file_obj,obj)
+        with open(file_path,'wb') as file_obj:
+            dill.dump(obj,file_obj)
         logging.info("Object is save in the folder")
     except Exception as e:
         raise MyException(e,sys)

@@ -25,7 +25,17 @@
 15. Write the exception file and test it on demo.py
 16. EDA and Feature Engg notebook added.
 
------------------------------------------------ Data Ingestion -----------------------------------------------
+----------------------------------------------- Steps -----------------------------------------------                               
+Steps
+      Constants >>>>>>> Config_entity >>>>>>>>>>>>> Artifact_entity >>>>>>>>>>>>> 
+                                    1. Data_Ingestion
+                                    2. Data_Validation
+                                    3. Data_Transformation
+                                    4. Model_Traininng
+                                    5. Model_Evaluation
+    >>>>>>>>>>>>>>combine all of them in [Pipeline file]. 
+----------------------------------------------- Data Ingestion -----------------------------------------------                               
+      
 17. Before we work on "Data Ingestion" component >> Declare variables within constants.__init__.py file >> 
     - add code to configuration.mongo_db_connections.py file and define the func for mondodb connection >> 
     Inside "data_access" folder, add code to fetch_data.py file that will use mongo_db_connections.py file from configuration folder
@@ -60,7 +70,12 @@
       * Attach policy >> select AdministratorAccess >> next >> create user
       * Go to the user >> Security Credentials >> Access Keys >> Create access key
       * Select CLI >> agree to condition >> next >> Create Access Key >> download csv file
-      * Set env variables with above csv values using below method:
+
+      >< Set env variables with above csv values using below method:><
+      1. Hide AWS credential in .env
+      2. Bring all credentials in Constant files
+      3. Create a AWS connection file that links and access with Configuration folder.
+
       ====================================================================================
          >> Set env var from bash terminal: <<
          export AWS_ACCESS_KEY_ID="AWS_ACCESS_KEY_ID"

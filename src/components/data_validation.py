@@ -101,13 +101,13 @@ class DataValidation:
                 logging.info(f"All required columns are present in test set of dataframe: {test_datatype_status}")
 
             ##store the message as nothing/empty/message either there is no misisng columns or missing columns
-            validation_status= len(validation_error_message)==0
+            validation_status = len(validation_error_message) == 0
 
             ##make report for data validation
             data_validation_artifact=DataValidationArtifact(validation_status=validation_status,
                                                             message=validation_error_message,
                                                             validation_report_file_path=self.data_validation_config.validation_report_file_path)
-
+                                                                        
             ##path of the directory for the data validation report file should store
             report_path_dir=os.path.dirname(self.data_validation_config.validation_report_file_path)
 
@@ -125,6 +125,7 @@ class DataValidation:
             
             logging.info("Data validation artifact created and saved to JSON file.")
             logging.info(f"Data validation artifact: {data_validation_artifact}")
+            return data_validation_artifact
         except Exception as e:
             raise MyException(e,sys)
 

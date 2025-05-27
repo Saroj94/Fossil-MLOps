@@ -23,7 +23,7 @@ from src.pipline.training_pipeline import TrainPipeline
 
 # print(MONGODB_URL)
 # mg=MongoDBClient()
-# # print(mg)
+# print(mg)
 # ft=FetchData()
 # tab=ft.export_collection_as_dataframe(collection_name=COLLECTION_NAME,database_name=DATABASE_NAME)
 # print(tab.head())
